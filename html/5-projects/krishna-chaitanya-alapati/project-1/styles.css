@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f6;
+  line-height: 1.5;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding: 35px 40px;
+  background-color: #4a6c82;
+  color: #fdfdfd;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 25px;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4a6c82;
+}
+
+section p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+section ul {
+  margin: 15px 0 15px 0;
+  padding-left: 30px;
+}
+
+section ul li {
+  margin-bottom: 8px;
+}
+
+form {
+  margin: 40px auto 20px auto;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+form h2 {
+  font-size: 1.5rem;
+  color: #4a6c82;
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+form button {
+  display: block;
+  width: 120px;
+  padding: 12px 20px;
+  background-color: #6290a1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 20px auto 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #4a6c82;
+  color: #fdfdfd;
+  margin-top: 50px;
+}
