@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Training Topics</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+                background-color: #f4f4f9;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background: #fff;
+            }
+
+            .container .header {
+                display: flex;
+                flex-wrap: wrap;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .container iframe {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .topics,
+            .assignments {
+                flex: 1;
+                min-width: 300px;
+                margin: 10px;
+            }
+
+            h2 {
+                color: #333;
+                border-bottom: 2px solid #f4f4f9;
+                padding-bottom: 5px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 10px 0;
+                list-style: none;
+            }
+
+            ul li {
+                padding: 5px 0;
+            }
+
+            ul li::before {
+                content: "•";
+                color: #333;
+                font-weight: bold;
+                display: inline-block;
+                width: 20px;
+            }
+
+            footer {
+                text-align: center;
+                padding: 10px;
+                background: #333;
+                color: #fff;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Advanced CSS Techniques & Responsive Design</h1>
+        </header>
+        <div class="container">
+            <div class="header">
+                <div class="topics">
+                    <h3>CSS Flexbox</h3>
+                    <ul>
+                        <li>What is Flexbox?</li>
+                        <li>
+                            Flexbox properties: <code>display: flex</code>,
+                            <code>flex-direction</code>,
+                            <code>justify-content</code>
+                        </li>
+                        <li>Creating layouts using Flexbox</li>
+                    </ul>
+
+                    <h3>CSS Grid</h3>
+                    <ul>
+                        <li>What is CSS Grid?</li>
+                        <li>
+                            Grid properties: <code>display: grid</code>,
+                            <code>grid-template-columns</code>,
+                            <code>grid-template-rows</code>
+                        </li>
+                        <li>Creating a simple grid layout</li>
+                    </ul>
+
+                    <h3>CSS Transitions and Animations</h3>
+                    <ul>
+                        <li>
+                            CSS Transitions: <code>transition</code>,
+                            <code>transition-duration</code>,
+                            <code>transition-property</code>
+                        </li>
+                        <li>
+                            CSS Animations: <code>@keyframes</code>,
+                            <code>animation-name</code>,
+                            <code>animation-duration</code>
+                        </li>
+                    </ul>
+
+                    <h3>Responsive Design and Media Queries</h3>
+                    <ul>
+                        <li>What is responsive design?</li>
+                        <li>
+                            Using <code>@media</code> to apply CSS based on
+                            screen size
+                        </li>
+                    </ul>
+                </div>
+                <div class="assignments">
+                    <h2>Assignments</h2>
+                    <ul>
+                        <li>
+                            Build a responsive webpage with a header, footer,
+                            and content area using Flexbox or Grid.
+                        </li>
+                        <li>
+                            Implement a simple animation and media queries for
+                            responsiveness.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>Assignments</h2>
+                <details>
+                    <summary onclick="showContent(event)">
+                        Krishna Chaitanya Alapati
+                    </summary>
+                    <iframe
+                        data-src="./krishna-chaitanya-alapati/index.html"
+                    ></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Saket Raj</summary>
+                    <iframe data-src="./saket-raj/index.html"></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">
+                        Parthasaradhi Manikonda
+                    </summary>
+                    <iframe
+                        data-src="./parthasaradhi-manikonda/index.html"
+                    ></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">
+                        Barlapudi Pallavi Krishna
+                    </summary>
+                    <iframe
+                        data-src="./barlapudi-pallavi-krishna/index.html"
+                    ></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Surya</summary>
+                    <iframe data-src="./surya/index.html"></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Mounika</summary>
+                    <iframe data-src="./mounika/index.html"></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Esha</summary>
+                    <iframe data-src="./esha/index.html"></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Resha</summary>
+                    <iframe data-src="./resha/index.html"></iframe>
+                </details>
+                <details>
+                    <summary onclick="showContent(event)">Yamini</summary>
+                    <iframe data-src="./yamini/index.html"></iframe>
+                </details>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 CSS Training Program</p>
+        </footer>
+        <script type="text/javascript">
+            // Function to display the selected content
+            function showContent(event) {
+                const iframes = document.getElementsByTagName("iframe");
+                Array.from(iframes).forEach((iframe) => {
+                    iframe.src = "";
+                });
+                event.target.nextElementSibling.src =
+                    event.target.nextElementSibling.dataset.src;
+            }
+        </script>
+    </body>
+</html>
