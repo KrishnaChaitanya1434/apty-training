@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Saira+Stencil+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.intro {
+  background: linear-gradient(120deg, #70aced, #6cd1ed);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.bubble-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -60px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  animation: floatBubble infinite;
+}
+
+.bubble1 {
+  left: 10%;
+  width: 28px;
+  height: 28px;
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+.bubble2 {
+  left: 35%;
+  width: 18px;
+  height: 18px;
+  animation-duration: 5.5s;
+  animation-delay: 2.2s;
+}
+.bubble3 {
+  left: 60%;
+  width: 38px;
+  height: 38px;
+  animation-duration: 8s;
+  animation-delay: 1s;
+}
+.bubble4 {
+  left: 80%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 6.2s;
+  animation-delay: 3.5s;
+}
+.bubble5 {
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 7.5s;
+  animation-delay: 1.8s;
+}
+.bubble6 {
+  left: 25%;
+  width: 14px;
+  height: 14px;
+  animation-duration: 5.8s;
+  animation-delay: 0.9s;
+}
+.bubble7 {
+  left: 72%;
+  width: 22px;
+  height: 22px;
+  animation-duration: 6.7s;
+  animation-delay: 2.7s;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-105vh) scale(1.18);
+    opacity: 0;
+  }
+}
+
+.intro h1 {
+  font-size: 3rem;
+  animation: comeDown 1s ease-in-out;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  animation: comeUp 1s ease-in-out;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  color: #0056b3;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.about {
+  background: linear-gradient(120deg, #f5f8fb 30%, #d3eafc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  box-shadow: 0 6px 32px 0 rgba(80, 160, 200, 0.11);
+  max-width: 520px;
+  margin: 40px 0;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  text-align: left;
+  transition: box-shadow 0.3s;
+  z-index: 1;
+  border-left: 5px solid #59cdf6;
+}
+
+.about-card:hover {
+  box-shadow: 0 14px 48px 0 rgba(80, 160, 200, 0.16);
+}
+
+.about-card h2 {
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 2.1rem;
+  color: #27a2e4;
+  margin-bottom: 16px;
+}
+
+.about-card p {
+  font-size: 1.15rem;
+  color: #14305c;
+  line-height: 1.7;
+}
+
+.contact {
+  font-family: "Saira Stencil One", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 65px 0 65px 0;
+  gap: 32px;
+  margin-top: 20px;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-grid > h2 {
+  flex-basis: 100%;
+  text-align: center;
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 2.1rem;
+  color: #27a2e4;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.project-card {
+  background: linear-gradient(115deg, #fff, #e9f5fe 85%);
+  border-radius: 18px;
+  box-shadow: 0 4px 28px 0 rgba(38, 122, 170, 0.11);
+  transition: transform 0.25s ease, box-shadow 0.3s, border 0.225s;
+  padding: 0;
+  width: 290px;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 38px 0 rgba(36, 108, 155, 0.16);
+  border: 1.5px solid #61b6ff;
+  z-index: 1;
+}
+
+.project-card h3 {
+  color: #2895d6;
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 1.17rem;
+  margin: 1.1rem 0 0.35rem 0;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
+}
+
+.project-card p {
+  color: #29597a;
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+  flex: 1;
+  line-height: 1.5;
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
+  text-align: left;
+}
+
+.project-card-btn {
+  display: inline-block;
+  padding: 0.48rem 1.12rem;
+  background: #2895d6;
+  color: #fff;
+  border-radius: 9px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.98rem;
+  box-shadow: 0 3px 10px rgba(50, 130, 200, 0.05);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.project-card-btn:hover {
+  background: #217db3;
+  transform: scale(1.03);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.contact label {
+  text-align: left;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #007bff;
+  background-color: #eef6ff;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact button {
+  padding: 12px;
+  background-color: #2895d6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.5s ease,
+    font-size 0.5s ease;
+}
+
+.contact button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  font-size: 1.08rem;
+}
+
+footer {
+  background: #2895d6;
+  color: white;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes comeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes comeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .projects {
+    padding: 30px 0 30px 0;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-card h3,
+  .project-card p {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .project-card-btn {
+    margin-left: 0.7rem;
+  }
+
+  .project-grid {
+    gap: 18px;
+  }
+
+  .contact form {
+    width: 90%;
+  }
+
+  .about-card {
+    padding: 1.3rem 1rem;
+    max-width: 94vw;
+  }
+
+  .about-card h2 {
+    font-size: 1.2rem;
+  }
+}
