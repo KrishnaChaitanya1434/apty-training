@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: white;
+  background-color: #ebebeb;
+}
+
+a {
+  color: white;
+}
+
+.site-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.roi-tab {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(90deg, #7f2bf6, #5305bc);
+  font-size: clamp(0.6rem, 0.9vw, 1.8rem);
+  font-weight: 550;
+  padding: clamp(0.3rem, 0.5vw, 1.3rem);
+  min-height: 34px;
+}
+
+.roi-tab-text {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6vw;
+}
+
+.roi-calculator-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.roi-arrow {
+  width: 18px;
+  height: auto;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.roi-calculator-btn:hover .roi-arrow {
+  opacity: 1;
+  transform: translateX(1px);
+}
+
+.roi-tab-text a span {
+  text-decoration: none;
+  border-bottom: 2px solid white;
+  margin-left: 20px;
+}
+
+.main-nav {
+  background-color: #231334;
+  display: flex;
+  padding: 0.8rem 6vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo .nav-links {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.logo img {
+  width: 5.4rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.free-trial-button,
+.book-demo-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-align: center;
+  background-color: #fc5614;
+}
+
+.free-trial-button:hover,
+.book-demo-button:hover {
+  background: linear-gradient(to right, #f97828, #f459b1);
+}
+
+.main-content {
+  width: 100%;
+}
+
+.booking-section {
+  width: 100%;
+  padding: 5%;
+  background-image: url(../../assets/bg-hero-2.svg);
+  background-size: cover;
+  height: 150vh;
+  display: flex;
+  justify-content: space-around;
+}
+.left-booking-section {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.left-booking-content {
+  flex: 1;
+}
+.left-booking-content h2 {
+  line-height: 80px;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.left-booking-content h2 span {
+  background: linear-gradient(to right, #f97828, #f459b1);
+  background-clip: text;
+  color: transparent;
+}
+.left-booking-content p {
+  font-size: 1.3rem;
+  line-height: 33px;
+  margin-bottom: 80px;
+}
+.left-achievements {
+  flex: 1;
+}
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.images-container img {
+  width: 120px;
+}
+.right-booking-form {
+  flex: 1;
+  width: 100%;
+}
+.right-form {
+  padding: 5%;
+  background-color: #251a33;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+input,
+textarea {
+  background-color: #3a3047;
+  border: none;
+  border-radius: 5px;
+}
+.current-focus {
+  display: flex;
+  flex-direction: column;
+  color: #857a92;
+  gap: 4px;
+}
+.current-focus h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+}
+.current-focus p {
+  color: white;
+}
+.form-header h2 {
+  font-size: 1.85rem;
+}
+.accept-btn label {
+  color: #857a92;
+  font-size: 1.28rem;
+  font-weight: 400;
+}
+.submit-btn button {
+  background-color: #ff591a;
+  color: white;
+  padding: 3%;
+  width: 550px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.form-footer h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+.expectations-section {
+  width: 100%;
+  background-color: #f4f4f4;
+  color: black;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+}
+.expectation-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.expectation-content h1 span {
+  background: linear-gradient(to right, #f97828, #f459b1);
+  background-clip: text;
+  color: transparent;
+}
+.expectation-icons {
+  flex: 1;
+}
+.expectation-items-container {
+  display: flex;
+  justify-content: center;
+  gap: 6vw;
+}
+.expectation-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9vw;
+}
+.item-image img {
+  width: 31%;
+}
+.item-content p {
+  font-size: 1.2rem;
+  color: #757575;
+}
+.item-content p span {
+  font-weight: 500;
+  color: black;
+}
+.trust-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5vw;
+  gap: 2.5vw;
+}
+.trust-content {
+  text-align: center;
+  color: black;
+}
+.trust-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.trust-content h1 span {
+  background: linear-gradient(to right, #f97828, #f459b1);
+  background-clip: text;
+  color: transparent;
+}
+.trust-companies {
+  display: flex;
+  justify-content: center;
+}
+.trust-companies img {
+  width: 17%;
+  filter: grayscale(1);
+}
+footer {
+  width: 100%;
+  color: white;
+  background-color: #212121;
+}
+.footer-links-container {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #4a4a4a;
+}
+.footer-links {
+  flex: 1;
+}
+.footer-link-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.footer-link-items h3 {
+  color: #cccccc;
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+.footer-link-items p {
+  color: #878787;
+  font-size: 0.97rem;
+  font-weight: 450;
+  cursor: pointer;
+}
+.footer-link-items p:hover {
+  background: linear-gradient(to right, #f97828, #f459b1);
+  background-clip: text;
+  color: transparent;
+}
+.copyrights {
+  width: 100%;
+  padding: 0.8vw 10vw 0.7vw;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  color: #777777;
+}
+.copyrights-text {
+  flex: 1;
+}
+.copyrights-text p span:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #f97828, #f459b1);
+  background-clip: text;
+  color: transparent;
+}
+.socials-icons {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+  gap: 20px;
+}
+.socials-icons:hover {
+  cursor: pointer;
+}
