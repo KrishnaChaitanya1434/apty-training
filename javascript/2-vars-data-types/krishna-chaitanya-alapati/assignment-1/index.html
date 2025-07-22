@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const button = document.querySelector("button");
+            button.addEventListener("click",()=>{
+                alert('This is an internal script box');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button onclick="alert('This is an inline script box')">Click Me</button>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
