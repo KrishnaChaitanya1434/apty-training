@@ -12,5 +12,5 @@ output.innerHTML += `String + Number: ${str + num}<br>`;
 output.innerHTML += `Number + Boolean: ${num + bool}<br>`;
 output.innerHTML += `Null + Number: ${nul + num}<br>`;
 output.innerHTML += `Undefined + Number: ${undef + num}<br>`;
-output.innerHTML += `Number + Object: ${num + obj.a}<br>`;
-output.innerHTML += `Object + String: ${obj.a + str}<br>`;
+output.innerHTML += `Number + Object: ${num + obj}<br>`;
+output.innerHTML += `Object + String: ${obj + str}<br>`;
