@@ -8,7 +8,7 @@ function getName() {
 
 function checkStatus(fullname){
     const age = document.getElementById("age").value;
-    return (age>18) ? `Hello ${fullname} welcome to apty` : `Hello ${fullname} comeback after ${18 - age} years`;
+    return (age>=18) ? `Hello ${fullname} welcome to apty` : `Hello ${fullname} comeback after ${18 - age} years`;
 }
 
 function showEligibility() {

@@ -29,19 +29,19 @@ function getConverted() {
 }
 
 function logicalAND() {
-    const [a, b] = getConverted();
+    let [a, b] = getConverted();
     a &&= b;
     output.innerHTML = `Result = ${a}`;
 }
 
 function logicalOR() {
-    const [a, b] = getConverted();
+    let [a, b] = getConverted();
     a ||= b;
     output.innerHTML = `Result = ${a}`;
 }
 
 function nullishOP() {
-    const [a,b] = getConverted();
+    let [a,b] = getConverted();
     a ??= b;
     output.innerHTML = `Result = ${a}`;
 }

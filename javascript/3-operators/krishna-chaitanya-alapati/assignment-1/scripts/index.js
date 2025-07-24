@@ -25,7 +25,7 @@ function multiply() {
 
 function divide() {
     const [a,b] = getValue();
-    output.innerHTML = `Result = ${a / b}`;
+    output.innerHTML = b === 0 ?`Result = Cannot divide by Zero` : `Result = ${a / b}`;
 }
 
 function modulus() {
