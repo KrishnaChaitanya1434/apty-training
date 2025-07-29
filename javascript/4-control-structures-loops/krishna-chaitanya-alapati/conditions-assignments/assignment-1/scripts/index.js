@@ -1,7 +1,7 @@
 const output = document.getElementById("output");
 
 function checkGrade() {
-    const marks = document.getElementById("marks").value;
+    const marks = parseFloat(document.getElementById("marks").value);
     if (isNaN(marks)) {
         output.textContent = `Please enter a valid number for marks.`;
         return;

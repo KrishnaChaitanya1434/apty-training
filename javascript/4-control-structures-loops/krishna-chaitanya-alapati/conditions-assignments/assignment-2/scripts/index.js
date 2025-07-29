@@ -1,8 +1,11 @@
 const output = document.getElementById("output");
 
 function checkLeap() {
-    const year = document.getElementById("year").value;
-    
+    const year = parseInt(document.getElementById("year").value,10);
+    if (isNaN(year)){
+        output.innerHTML = `Please enter a valid year.`;
+        return;
+    }
     if (year <= 0) {
         output.innerHTML = `Please enter a positive year (e.g., 2000, 2024).`;
         return;
