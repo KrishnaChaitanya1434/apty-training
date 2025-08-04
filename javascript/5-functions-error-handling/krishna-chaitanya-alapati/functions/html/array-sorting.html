@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort the Array</title>
+  </head>
+  <body>
+    <h1>Array Sorting App</h1>
+    <form id="inputForm">
+      <label for="array">Enter the array numbers(comma-separated): </label>
+      <input type="text" id="array" required />
+      <button type="submit">Sort</button>
+    </form>
+    <div id="output-container">
+      <h2>Sorted Array Output:</h2>
+      <div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="error-output"></div>
+    <script src="../scripts/array-sorting.js"></script>
+  </body>
+</html>
