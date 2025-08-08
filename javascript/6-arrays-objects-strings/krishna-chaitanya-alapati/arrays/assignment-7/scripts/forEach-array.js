@@ -19,12 +19,12 @@ function introduceUsers() {
   let output = "";
   users.forEach((user) => {
     if (user.name && user.age) {
-      const message = `${user.name} is ${user.age} years old.`;
-      output += message + "<br>";
+      const message = `${user.name} is ${user.age} years old.\n`;
+      output += message;
     } else {
-      output += "Invalid user object: Missing name or age.<br>";
+      output += "Invalid user object: Missing name or age.";
     }
   });
 
-  document.getElementById("result").innerHTML = output;
+  document.getElementById("result").innerText = output;
 }

@@ -12,7 +12,7 @@ form.addEventListener("submit", function (event) {
       return;
     }
     if (!arr.length || !(property in arr[0])) {
-      result.textContent = `Property "${property}" not found in objects.`;
+      output.textContent = `Property "${property}" not found in objects.`;
       return;
     }
     arr.sort((a, b) => {

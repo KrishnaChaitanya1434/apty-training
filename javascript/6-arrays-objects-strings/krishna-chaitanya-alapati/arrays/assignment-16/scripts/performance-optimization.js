@@ -30,7 +30,7 @@ document.getElementById("button").addEventListener("click", function (event) {
     sum += num;
   });
   end = performance.now();
-  result += `forEach loop:  ${(end - start).toFixed(2)} m/s.`;
+  result += `forEach loop:  ${(end - start).toFixed(2)} ms.`;
 
   output.innerText = result;
 });

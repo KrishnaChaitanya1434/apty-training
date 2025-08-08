@@ -8,7 +8,7 @@ form.addEventListener("submit", function (event) {
   try {
     const matrix = JSON.parse(input);
 
-    if (!Array.isArray(matrix) || !Array.isArray(matrix[0])) {
+    if (!Array.isArray(matrix) || matrix.length === 0 || !matrix.every(row => Array.isArray(row))) {
       output.textContent = "Please enter a valid 2D array.";
       return;
     }

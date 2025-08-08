@@ -5,7 +5,7 @@ function escapeSequences(str) {
 function processText() {
   const input = document.getElementById("inputText").value;
   const escaped = escapeSequences(input);
-  if (input.value === "") {
+  if (input === "") {
     document.getElementById("outputText").textContent = "enter a string";
   } else {
     document.getElementById("outputText").textContent = escaped;
