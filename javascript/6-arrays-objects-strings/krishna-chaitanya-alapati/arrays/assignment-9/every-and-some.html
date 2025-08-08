@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Every and Some</title>
+  </head>
+  <body>
+    <h2>Every and Some for Student ranks</h2>
+    <form id="input">
+      <label for="userInput"
+        >Enter an array of student names with their marks (in JSON format):</label
+      ><br />
+      <textarea
+        id="userInput"
+        placeholder='[{"name": "A", "score": 80}, {"name": "B", "score": 90}]'
+        rows="7"
+        cols="50"
+      ></textarea
+      ><br /><br />
+      <button type="submit">Show students status</button>
+    </form>
+    <h3>Result:</h3>
+    <p id="result"></p>
+    <script src="./scripts/every-and-some.js"></script>
+  </body>
+</html>

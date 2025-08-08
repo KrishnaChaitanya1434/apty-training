@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map and Filter</title>
+  </head>
+  <body>
+    <h2>forEach on Array</h2>
+    <form id="input">
+      <label for="userInput"
+        >Enter an array of tasks with their status (in JSON format):</label
+      ><br />
+      <textarea
+        id="userInput"
+        placeholder='[{"task": "A", "completed": true}, {"task": "B", "completed": false}]'
+        rows="7"
+        cols="50"
+      ></textarea
+      ><br /><br />
+      <button type="submit">Show Completed tasks</button>
+    </form>
+    <h3>Result:</h3>
+    <p id="result"></p>
+    <script src="./scripts/map-and-filter.js"></script>
+  </body>
+</html>

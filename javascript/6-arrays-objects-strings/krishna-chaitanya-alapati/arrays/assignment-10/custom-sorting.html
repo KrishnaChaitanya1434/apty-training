@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Array Sorting</title>
+  </head>
+  <body>
+    <h2>Sorting student objects inside array based on their scores</h2>
+    <form id="input">
+      <label for="userInput"
+        >Enter an array of student names with their marks (in JSON
+        format):</label
+      ><br />
+      <textarea
+        id="userInput"
+        placeholder='[{"name": "A", "score": 80}, {"name": "B", "score": 90}]'
+        rows="7"
+        cols="50"
+      ></textarea
+      ><br /><br />
+      <label for="property">Sort by property:</label>
+      <input
+        type="text"
+        id="property"
+        placeholder="e.g. score"
+        required
+      /><br /><br />
+      <button type="submit">Sort Students</button>
+    </form>
+    <h3>Result:</h3>
+    <p id="result"></p>
+    <script src="./scripts/custom-sorting.js"></script>
+  </body>
+</html>
