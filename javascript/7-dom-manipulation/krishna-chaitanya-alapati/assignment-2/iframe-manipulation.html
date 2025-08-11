@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing and Manipulating Iframes</title>
+  </head>
+  <body>
+    <h1>Controller (Outside iframe)</h1>
+    <iframe
+      id="demo_iframe"
+      title="assignment1-iframe"
+      style="width: 100%; height: 420px; border: 1px solid #ccc"
+    ></iframe>
+    <div class="controls">
+      <button id="id_button">Change color (id)</button>
+      <button id="class_button">Change background Color (class)</button>
+      <button id="tag_button">Change Text (tag)</button>
+      <button id="name_button">Toggle Disabled (name)</button>
+      <button id="custom_attribute_button">
+        Custom Attribute Button (attribute)
+      </button>
+    </div>
+    <script src="./scripts/iframe-manipulations.js"></script>
+  </body>
+</html>

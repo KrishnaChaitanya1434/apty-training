@@ -1,0 +1,22 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  padding: 18px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+#shadow-host {
+  margin-top: 12px;
+  min-height: 200px;
+  background: #fafafa;
+  border: 2px dashed gray;
+  padding: 10px;
+}

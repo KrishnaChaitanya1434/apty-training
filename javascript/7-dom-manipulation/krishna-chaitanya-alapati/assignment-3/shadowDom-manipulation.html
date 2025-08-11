@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Accessing Shadow DOM</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <h1>Controller (Outside shadow DOM)</h1>
+    <div class="controls">
+      <button id="id_button">Change color (id)</button>
+      <button id="class_button">Change background Color (class)</button>
+      <button id="tag_button">Change Text (tag)</button>
+      <button id="name_button">Toggle Disabled (name)</button>
+      <button id="custom_attribute_button">
+        Custom Attribute Button (attribute)
+      </button>
+      <button id="reset_button">Reset Shadow Content</button>
+    </div>
+    <div id="shadow-host"></div>
+    <script src="./scripts/shadowDom-manipulation.js"></script>
+  </body>
+</html>

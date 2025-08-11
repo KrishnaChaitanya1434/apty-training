@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing and Manipulating Elements</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <h1>DOM Selection Methods Demo</h1>
+
+    <table>
+      <tr>
+        <th>id</th>
+        <th>className</th>
+        <th>tag</th>
+        <th>name</th>
+        <th>attribute</th>
+      </tr>
+      <tr>
+        <td>
+          <p id="id_1">id_1</p>
+        </td>
+        <td>
+          <p class="myClass">Paragraph 1</p>
+        </td>
+        <td>
+          <span>Span 1</span>
+        </td>
+        <td>
+          <input type="text" name="name1" value="Input 1" />
+        </td>
+        <td>
+          <p data-custom="custom1">custom attribute 1</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="id_2">id_2</p>
+        </td>
+        <td>
+          <p class="myClass">Paragraph 2</p>
+        </td>
+        <td>
+          <span>Span 2</span>
+        </td>
+        <td>
+          <input type="text" name="name2" value="Input 2" />
+        </td>
+        <td>
+          <p data-custom="custom2">custom attribute 2</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p id="id_3">id_3</p>
+        </td>
+        <td>
+          <p class="myClass">Paragraph 2</p>
+        </td>
+        <td>
+          <span>Span 3</span>
+        </td>
+        <td>
+          <input type="text" name="name3" value="Input 3" />
+        </td>
+        <td>
+          <p data-custom="custom3">custom attribute 3</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="id_button">Change color</button>
+        </td>
+        <td>
+          <button id="class_button">Change background Color</button>
+        </td>
+        <td>
+          <button id="tag_button">Change Text</button>
+        </td>
+        <td>
+          <button id="name_button">Toggle Disabled</button>
+        </td>
+        <td>
+          <button id="custom_attribute_button">Custom Attribute Button</button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="./scripts/elements-manipulation.js"></script>
+  </body>
+</html>
