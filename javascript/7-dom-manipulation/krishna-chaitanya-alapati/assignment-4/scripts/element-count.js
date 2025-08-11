@@ -6,9 +6,9 @@ document.getElementById("countBtn").addEventListener("click", () => {
 
   const resultDisplay = document.getElementById("results");
   resultDisplay.innerHTML = `
-        <div>Div elements: ${divCount}</div>
-        <div>Paragraph elements: ${pCount}</div>
-        <div>Span elements: ${spanCount}</div>
-        <div>Iframe elements: ${iframeCount}</div>
+        <li>Div elements: ${divCount}</li>
+        <li>Paragraph elements: ${pCount}</li>
+        <li>Span elements: ${spanCount}</li>
+        <li>Iframe elements: ${iframeCount}</li>
     `;
 });

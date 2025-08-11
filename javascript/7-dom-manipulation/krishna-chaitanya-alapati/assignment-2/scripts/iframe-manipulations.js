@@ -5,7 +5,6 @@ const iframeHTML = `
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Assignment1 Content</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     table { border-collapse: collapse; width: 100%; font-family: sans-serif; }
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }

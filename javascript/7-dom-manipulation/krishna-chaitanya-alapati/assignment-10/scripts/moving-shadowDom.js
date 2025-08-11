@@ -13,23 +13,12 @@ const shadowHTML = `
                         <tr>
                             <td>Row ${i + 1}</td>
                             <td>
-                                <button onclick="setActiveRow(${
-                                  i + 1
-                                })">Select</button>
+                                <button>Select</button>
                             </td>
                         </tr>`
                     ).join("")}
                 </tbody>
             </table>
-            <script>
-                let activeRow = null;
-                function setActiveRow(rowNumber) {
-                    activeRow = document.querySelectorAll('#myTable tbody tr')[rowNumber - 1];
-                }
-                function getActiveRow() {
-                    return activeRow;
-                }
-            </script>
         `;
 
 const shadowContainer = document.getElementById("shadowContainer");
