@@ -16,9 +16,9 @@ window.addEventListener("keydown", (e) => {
   if (e.repeat) {
     return;
   }
-  keydownDiv.innerText += formatCombo(e) + "\n";
+  keydownDiv.append(formatCombo(e) + "\n");
 });
 
 window.addEventListener("keyup", (e) => {
-  keyupDiv.innerText += formatCombo(e) + "\n";
+  keyupDiv.append(formatCombo(e) + "\n");
 });
