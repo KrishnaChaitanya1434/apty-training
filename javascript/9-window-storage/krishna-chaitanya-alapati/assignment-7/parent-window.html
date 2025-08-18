@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Relationships</title>
+  </head>
+  <body>
+    <h1>Top / Parent Window</h1>
+
+    <input id="parentInput" type="text" placeholder="Message to iframe" />
+    <button id="sendToIframeBtn">Send to Iframe</button>
+
+    <div id="parentLog"></div>
+
+    <iframe id="childFrame" src="./child-window.html"></iframe>
+
+    <script src="./scripts/parent.js"></script>
+  </body>
+</html>
