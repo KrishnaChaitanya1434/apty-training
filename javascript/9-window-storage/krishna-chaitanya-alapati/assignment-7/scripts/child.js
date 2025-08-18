@@ -1,18 +1,33 @@
 const childInput = document.getElementById("childInput");
+const sendToParentBtn = document.getElementById("sendToParentBtn");
+const sendToTopBtn = document.getElementById("sendToTopBtn");
 const childLog = document.getElementById("childLog");
 
-document.getElementById("sendToParentBtn").addEventListener("click", () => {
-  const msg = childInput.value || "(empty)";
-  parent.postMessage({ from: "iframe", to: "parent", text: msg }, "*");
+const parentOrigin = window.location.origin;
+
+sendToParentBtn.addEventListener("click", () => {
+  const message = childInput.value;
+  if (window.parent) {
+    window.parent.postMessage(message, parentOrigin);
+    logChild(`Sent to parent: ${message}`);
+  }
 });
 
-document.getElementById("sendToTopBtn").addEventListener("click", () => {
-  const msg = childInput.value || "(empty)";
-  top.postMessage({ from: "iframe", to: "top", text: msg }, "*");
+sendToTopBtn.addEventListener("click", () => {
+  const message = childInput.value;
+  if (window.top) {
+    window.top.postMessage(message, parentOrigin);
+    logChild(`Sent to top: ${message}`);
+  }
 });
 
-window.onmessage = function (event) {
-  const data = event.data;
-  if (!data || typeof data !== "object") return;
-  childLog.textContent = `Iframe received: ${JSON.stringify(data)}`;
-};
+window.addEventListener("message", (event) => {
+  if (event.origin !== parentOrigin) return;
+  logChild(`Received: ${event.data}`);
+});
+
+function logChild(msg) {
+  const p = document.createElement("p");
+  p.textContent = msg;
+  childLog.appendChild(p);
+}

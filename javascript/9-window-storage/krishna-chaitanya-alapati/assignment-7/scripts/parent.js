@@ -1,15 +1,25 @@
-const frame = document.getElementById("childFrame");
-const sendBtn = document.getElementById("sendToIframeBtn");
+const childFrame = document.getElementById("childFrame");
 const parentInput = document.getElementById("parentInput");
+const sendToIframeBtn = document.getElementById("sendToIframeBtn");
 const parentLog = document.getElementById("parentLog");
 
-sendBtn.addEventListener("click", () => {
-  const msg = parentInput.value || "(empty)";
-  frame.contentWindow.postMessage({ from: "parent", text: msg }, "*");
+const childOrigin = window.location.origin;
+
+sendToIframeBtn.addEventListener("click", () => {
+  const message = parentInput.value;
+  if (childFrame && childFrame.contentWindow) {
+    childFrame.contentWindow.postMessage(message, childOrigin);
+    logParent(`Sent to iframe: ${message}`);
+  }
 });
 
-window.onmessage = function (event) {
-  const data = event.data;
-  if (!data || typeof data !== "object") return;
-  parentLog.textContent = `Parent received: ${JSON.stringify(data)}`;
-};
+window.addEventListener("message", (event) => {
+  if (event.origin !== childOrigin) return;
+  logParent(`Received: ${event.data}`);
+});
+
+function logParent(msg) {
+  const p = document.createElement("p");
+  p.textContent = msg;
+  parentLog.appendChild(p);
+}
