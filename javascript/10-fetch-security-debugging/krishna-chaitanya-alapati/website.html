@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEasy</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <div class="nav-container">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+
+        <h1 class="logo">ShopEasy</h1>
+
+        <div class="nav-searches">
+          <!-- Search by Name -->
+          <div class="nav-search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by name..."
+            />
+            <button onclick="searchProducts()">Search</button>
+          </div>
+
+          <!-- Search by ID -->
+          <div class="nav-search">
+            <input
+              type="number"
+              id="productIDInput"
+              placeholder="Search by ID..."
+            />
+            <button onclick="getProduct()">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Error section -->
+      <p id="error" class="error"></p>
+      <!--Result header section-->
+      <div id="result-header"></div>
+      <!-- Results section -->
+      <section id="result" class="result"></section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 ShopEasy — Shopping Made Simple</p>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
